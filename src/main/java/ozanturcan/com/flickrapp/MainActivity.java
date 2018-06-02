@@ -1,32 +1,17 @@
 package ozanturcan.com.flickrapp;
 
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.widget.Toast;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-
 import ozanturcan.com.flickrapp.Models.FlickerService;
-import ozanturcan.com.flickrapp.Models.GetFlickerServices;
-import ozanturcan.com.flickrapp.Models.Photo;
 import ozanturcan.com.flickrapp.Models.Photos;
 import ozanturcan.com.flickrapp.Models.PojoFlicker;
 import ozanturcan.com.flickrapp.Models.RestRETROFIT;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-import static android.content.ContentValues.TAG;
 
 public class MainActivity extends AppCompatActivity {
     private SwipeRefreshLayout swipeContainer;
@@ -78,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.addOnScrollListener(myListener);
         //endregion
         recyclerView.setLayoutManager(new GridLayoutManager(this,3));
-        GetFlickerServices.getFlickerServices(this);
+        FlickerService.getFlickerServices(this);
         lstPhoto = new Photos();
 
     }
@@ -86,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         // Send the network request to fetch the updated data
         // `client` here is an instance of Android Async HTTP
         // getHomeTimeline is an example endpoint.
-        GetFlickerServices.getFlickerServices(this);
+        FlickerService.getFlickerServices(this);
 
         recyclerViewAdapter.notifyDataSetChanged();
     }
