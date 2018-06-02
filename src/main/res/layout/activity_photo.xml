@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fcfcfc"
+    tools:context=".PhotoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="ExtraText">
+
+        <ImageView
+            android:id="@+id/bookthumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:scaleType="center" />
+
+        <LinearLayout
+            android:id="@+id/bookthumbnail4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cardview_default_elevation"
+            android:layout_marginTop="-80dp"
+            android:elevation="30dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="40dp">
+
+                <ImageView
+                    android:id="@+id/imguserphoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="-15dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:scaleType="center" />
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/txtusername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-40dp"
+                android:background="#8d1b1a1a"
+                android:gravity="center|left"
+                android:paddingLeft="60dp"
+                android:text="Username"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Book Title"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <!--<TextView-->
+        <!--android:id="@+id/txtCat"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Category"-->
+        <!--android:background="#edecec"-->
+        <!--android:padding="8dp"-->
+        <!--android:layout_marginTop="10dp"/>-->
+        <TextView
+            android:id="@+id/txtCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#edecec"
+            android:padding="8dp"
+            android:text="Category" />
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Description"
+            android:textSize="18sp" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
